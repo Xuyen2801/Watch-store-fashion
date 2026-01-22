@@ -1,6 +1,6 @@
 /* Quy tắc chung */
 :root {
-    --mau-Nen: rgb(0, 95, 162);
+    --mau-Nen: rgb(75, 75, 75);
     --mau_btn: rgb(249, 189, 36);
 }
 
@@ -8,7 +8,7 @@ body {
     width: 100%;
     margin: 0 !important;
     font-size: 12px;
-    padding-top: 0; /* Đã bỏ padding-top 50px */
+    padding-top: 0;
 }
 li{
     list-style: none;
@@ -32,6 +32,18 @@ li{
     border-radius: 0px !important;
     margin-top:5px ;
 }
+.nav-link {
+    color: #a7a7a7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #9d9d9d !important;
+}
+#registerBtn {
+    cursor: pointer;
+}
+
 .menu_Cap1{
     display: none;
 }
@@ -41,7 +53,7 @@ li{
 }
 .menu ul li a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
 }
 .menu_Cap2{
     display: none;
@@ -55,7 +67,7 @@ li{
     z-index: 1001;
 }
 .navbar-collapse{
-    width: 80%;
+    width: 85%;
 }
 .navbar {
     padding: 0 5%;
@@ -72,7 +84,7 @@ li{
 }
 
 .navbar-nav .nav-link {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 500;
 }
 .navbar-nav{
@@ -80,7 +92,7 @@ li{
     width: 80%;
 }
 .navbar-brand{
-    width: 20%;
+    width: 15%;
 }
 
 
@@ -126,7 +138,7 @@ li{
 }
 
 .dropdown-item:hover {
-    background-color: #f8f9fa;
+    background-color: #b7b7b773;
     color: var(--mau-Nen);
 }
 .search{
@@ -165,7 +177,7 @@ li{
 
 .logo_footer {
     width: 350px;
-    height: 100px;
+    height: 100%;
 }
 
 .div-column {

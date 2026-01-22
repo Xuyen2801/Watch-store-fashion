@@ -12,6 +12,7 @@ h3 {
     padding: 20px 0;
 }
 
+
 .ct_us {
     display: flex;
     justify-content: space-between;
@@ -145,4 +146,8 @@ a {
         .baner img {
             height: 180px;
         }
+      
+}
+header{
+    background-color: #999999;
 }

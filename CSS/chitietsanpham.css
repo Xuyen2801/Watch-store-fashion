@@ -10,7 +10,9 @@
 .product-images {
     flex: 1;
 }
-
+.navbar-dark .navbar-nav .nav-link{
+    color: #ffffff;
+}
 .main-image {
     margin-bottom: 20px;
     border-radius: 8px;
@@ -30,13 +32,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    
 }
 
 .thumbnail-images img {
-    width: 100%;
     border-radius: 4px;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    width: 500px;
+    height: 120px;
 }
 
 .thumbnail-images img:hover {

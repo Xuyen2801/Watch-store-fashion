@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/thanhtoan.css">
+    <link rel="stylesheet" href="../icon/themify-icons-font/themify-icons/themify-icons.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán</title>
+    <style>
+        .payment-success {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1001;
+        }
+
+        .payment-success h2 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .payment-success p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
 </head>
+
 <body>
     <div class="Container">
         <div class="container-fluid p-0">
             <header class="header">
                 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
-                    <!-- Logo -->
                     <a class="navbar-brand logo" href="#">
                         <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
-                    </a> 
-    
-                    <!-- Nút toggle cho mobile -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span><i class="ti-menu"></i></span>
                     </button>
-                    <!-- Menu -->
                     <div class="navbar-collapse menu" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     DANH MỤC
                                 </a>
                                 <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
@@ -77,7 +115,6 @@
                 <div class="payment-info">
                     <h4>Thông tin đơn hàng</h4>
                     <div id="payment-items">
-                        <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
                     </div>
                     <div class="payment-total">
                         <div class="total-row">
@@ -137,7 +174,8 @@
                                 </div>
                             </div>
                             <div class="payment-note">
-                                <p><strong>Lưu ý:</strong> Sau khi xác nhận đơn hàng, bạn sẽ được chuyển đến trang thanh toán của đối tác.</p>
+                                <p><strong>Lưu ý:</strong> Sau khi xác nhận đơn hàng, bạn sẽ được chuyển đến trang thanh
+                                    toán của đối tác.</p>
                             </div>
                         </div>
                         <div class="form-group">
@@ -145,62 +183,204 @@
                             <textarea id="note" rows="2"></textarea>
                         </div>
                         <div class="payment-actions">
-                            <button type="button" class="btn-back" onclick="window.location.href='GioHang.html'">Quay lại giỏ hàng</button>
-                            <button type="submit" class="btn-pay">Thanh toán</button>
+                            <button type="button" class="btn-back" onclick="window.location.href='GioHang.html'">Quay
+                                lại giỏ hàng</button>
+                            <button type="submit" class="btn-pay" id="confirmPayment">Thanh toán</button>
+
                         </div>
+                       
                     </form>
+                   
                 </div>
+               
             </div>
+           
         </div>
 
         <div class="div-container footer">
             <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
             <div class="div-column">
                 <ul>
-                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
-                    <li><a href="#">Tìm đồng hồ Rolex của bạn</a></li>
-                    <li><a href="#">Đồng hồ nam</a></li>
-                    <li><a href="#">Đồng hồ nữ</a></li>
-                </ul>
+                    <li class="text_title"><a href="../HTML/about.html">Đồng hồ Rolex</a></li>
+                    <li><a href="../HTML/tatCaSanPham.html">Tìm đồng hồ Rolex của bạn</a></li>
+                    <li><a href="../HTML/DongHoNam.html">Đồng hồ nam</a></li>
+                    <li><a href="../HTML/DongHoNu.html">Đồng hồ nữ</a></li>
+                    </ul>
                 <ul>
-                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
-                    <li><a href="#">Cosmograph Daytona</a></li>
-                    <li><a href="#">Datejust</a></li>
-                    <li><a href="#">Explorer</a></li>
-                    <li><a href="#">Submariner</a></li>
-                </ul>
-            </div>
+                    <li class="text_title"><a href="../HTML/tatCaSanPham.html">Đồng hồ Rolex</a>
+                    </li>
+                    <li><a href="../HTML/tatCaSanPham.html">Cosmograph Daytona</a></li>
+                    <li><a href="../HTML/tatCaSanPham.html">Datejust</a></li>
+                    <li><a href="../HTML/tatCaSanPham.html">Explorer</a></li>
+                    <li><a href="../HTML/tatCaSanPham.html">Submariner</a></li>
+                    </ul>
+                </div>
             <div class="div-column">
                 <ul>
-                    <li class="text_title"><a href="#">Rolex và Thể thao</a></li>
-                    <li><a href="#">Bộ môn golf</a></li>
-                    <li><a href="#">Bộ môn đua thuyền</a></li>
-                </ul>
+                    <li class="text_title"><a href="../HTML/DongHoTheThao.html">Rolex và Thể
+                            thao</a></li>
+                    <li><a href="../HTML/DongHoTheThao.html">Bộ môn golf</a></li>
+                    <li><a href="../HTML/DongHoTheThao.html">Bộ môn đua thuyền</a></li>
+                    </ul>
                 <ul>
-                    <li class="text_title"><a href="#">Về Rolex</a></li>
-                    <li><a href="#">Tính bền vững</a></li>
-                    <li><a href="#">Lịch sử</a></li>
-                </ul>
+                    <li class="text_title"><a href="../HTML/about.html">Về Rolex</a></li>
+                    <li><a href="../HTML/tinh_ben.html">Tính bền vững</a></li>
+                    <li><a href="../HTML/lili">Lịch sử</a></li>
+                    </ul>
                 <ul>
-                    <li class="text_title"><a href="#">Mua một chiếc Rolex</a></li>
-                    <li><a href="#">Định vị cửa hàng</a></li>
-                </ul>
-            </div>
+                    <li class="text_title"><a href="../HTML/tatCaSanPham.html">Mua một chiếc
+                            Rolex</a></li>
+                    <li><a href="../HTML/tatCaSanPham.html">Định vị cửa hàng</a></li>
+                    </ul>
+                </div>
             <div class="div-column">
                 <ul>
-                    <li class="text_title"><a href="#">Dịch vụ</a></li>
-                    <li><a href="#">Những câu hỏi thường gặp</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                </ul>
+                    <li class="text_title"><a href="../HTML/thongBao.html">Dịch vụ</a></li>
+                    <li><a href="../HTML/thongBao.html">Những câu hỏi thường gặp</a></li>
+                    <li><a href="../HTML/thongBao.html">Tin tức</a></li>
+                    </ul>
                 <ul>
                     <li class="text_title"><a href="#">Kênh chính thức</a></li>
-                    <li><a href="#"><i class="ti-youtube"></i>YouTube</a></li>
-                    <li><a href="#"><i class="ti-instagram"></i>Instagram</a></li>
-                    <li><a href="#"><i class="ti-facebook"></i>Facebook</a></li>
-                </ul>
+                    <li><a href="https://www.youtube.com/@ROLEX"><i
+                                class="ti-youtube"></i>YouTube</a></li>
+                    <li><a href="https://www.instagram.com/rolex/"><i
+                                class="ti-instagram"></i>Instagram</a></li>
+                    <li><a href="https://www.facebook.com/rolex"><i
+                                class="ti-facebook"></i>Facebook</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+       
     </div>
-    <script src="../JS/thanhtoan.js"></script>
+
+    <div id="paymentSuccessModal" class="payment-success">
+        <h2>Thanh toán thành công!</h2>
+        <p>Cảm ơn bạn đã mua hàng.</p>
+        <p>Bạn sẽ được chuyển về trang chủ sau <span id="countdown">3</span> giây...</p>
+        </div>
+
+    <div id="overlay" class="overlay"></div>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('paymentForm');
+            const confirmPaymentButton = document.getElementById('confirmPayment');
+            const paymentSuccessModal = document.getElementById('paymentSuccessModal');
+            const overlay = document.getElementById('overlay');
+            const countdownElement = document.getElementById('countdown');
+
+            // Lắng nghe sự kiện submit của form thanh toán
+            paymentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn chặn hành động submit mặc định
+
+                // **Bước 1: Thu thập dữ liệu từ form**
+                const fullName = document.getElementById('fullName').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const paymentMethod = document.getElementById('paymentMethod').value;
+                const note = document.getElementById('note').value.trim();
+                let onlineMethod = null;
+                if (paymentMethod === 'online') {
+                    const selectedOnlineMethod = document.querySelector('input[name="onlineMethod"]:checked');
+                    if (selectedOnlineMethod) {
+                        onlineMethod = selectedOnlineMethod.value;
+                    } else {
+                        alert('Vui lòng chọn phương thức thanh toán online.');
+                        return; // Dừng nếu chưa chọn phương thức online
+                    }
+                }
+
+                // **Bước 2: Kiểm tra dữ liệu (validation cơ bản)**
+                if (!fullName || !phone || !address || !paymentMethod) {
+                    alert('Vui lòng điền đầy đủ thông tin giao hàng và chọn phương thức thanh toán.');
+                    return; // Dừng nếu thiếu thông tin
+                }
+
+                if (paymentMethod === 'online' && !onlineMethod) {
+                    return; // Đã được kiểm tra ở trên, nhưng để chắc chắn
+                }
+
+                // **Bước 3: Thực hiện xử lý thanh toán (ở đây chỉ là giả lập)**
+                console.log('Thông tin đơn hàng:', {
+                    fullName,
+                    phone,
+                    address,
+                    paymentMethod,
+                    onlineMethod,
+                    note,
+                    cartItems: JSON.parse(localStorage.getItem('cart')) || [],
+                    totalAmount: parseFloat(document.getElementById('payment-total').textContent.replace(/\./g, '').replace(' VNĐ', ''))
+                });
+
+                // Giả định thanh toán thành công sau một khoảng thời gian ngắn
+                setTimeout(function () {
+                    // Hiển thị thông báo thành công
+                    paymentSuccessModal.style.display = 'block';
+                    overlay.style.display = 'block';
+
+                    let seconds = 3;
+                    countdownElement.textContent = seconds;
+
+                    const countdownInterval = setInterval(function () {
+                        seconds--;
+                        countdownElement.textContent = seconds;
+                        if (seconds <= 0) {
+                            clearInterval(countdownInterval);
+                            window.location.href = '../HTML/Home.html'; // Chuyển về trang chủ
+                        }
+                    }, 1000);
+                }, 1000); // Giả lập thời gian xử lý thanh toán
+            });
+
+            // Hiển thị/ẩn thông tin thanh toán online
+            const paymentMethodSelect = document.getElementById('paymentMethod');
+            const onlinePaymentInfo = document.getElementById('onlinePaymentInfo');
+
+            paymentMethodSelect.addEventListener('change', function () {
+                if (this.value === 'online') {
+                    onlinePaymentInfo.style.display = 'block';
+                } else {
+                    onlinePaymentInfo.style.display = 'none';
+                }
+            });
+
+            // Lấy dữ liệu giỏ hàng (ví dụ: từ localStorage) và hiển thị
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const paymentItemsDiv = document.getElementById('payment-items');
+            const paymentSubtotalSpan = document.getElementById('payment-subtotal');
+            const paymentTotalSpan = document.getElementById('payment-total');
+            let subtotal = 0;
+
+            if (cartItems.length > 0) {
+                cartItems.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('payment-item');
+                    itemDiv.innerHTML = `
+                     <span>${item.name} x ${item.quantity}</span>
+                <span>${formatCurrency(item.price * item.quantity)}</span>
+                     `;
+                    paymentItemsDiv.appendChild(itemDiv);
+                    subtotal += item.price * item.quantity;
+                });
+            } else {
+                paymentItemsDiv.innerHTML = '<p>Không có sản phẩm nào trong giỏ hàng.</p>';
+            }
+
+            const shippingFee = 30000;
+            const total = subtotal + shippingFee;
+
+            paymentSubtotalSpan.textContent = formatCurrency(subtotal) + ' VNĐ';
+            document.getElementById('payment-shipping').textContent = formatCurrency(shippingFee) + ' VNĐ';
+            paymentTotalSpan.textContent = formatCurrency(total) + ' VNĐ';
+
+            function formatCurrency(number) {
+                return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number).replace('₫', '');
+            }
+        });
+    </script>
+   
+    <script src="../JS/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+
+</html>

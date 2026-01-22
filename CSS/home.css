@@ -5,13 +5,17 @@
     text-align: center;
     padding-top: 50px;
 }
-
+.collections {
+    cursor: pointer;
+}
 .back_drop {
     width: 100%;
     margin-bottom: 100px;
     position: relative;
 }
-
+.text{
+    width: 75%;
+}
 .Advertising h3 {
     margin: 50px 0;
 }
@@ -25,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    align-items: center; /* Thêm align-items để căn giữa các item theo chiều dọc */
 }
 
 .text_banner {
@@ -42,16 +47,20 @@
 .pr_demo_item img {
     width: 100%;
 }
-
+.collections:hover{
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
 .pr_demo_item p {
     margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
 }
-
+.cs_item:hover{
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
 .bst {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .list_cl {
@@ -62,7 +71,8 @@
 
 .collections {
     width: 30%;
-    text-align: center;
+    margin:50px 0;
+    padding: 10px;
 }
 
 .collections img {
@@ -73,25 +83,208 @@
     margin-top: 10px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+    transition: color 0.3s;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.gender-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 8px;
+}
+
+.gender-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.gender-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: none;
+}
+
+.result h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.result p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.result strong {
+    color: #333;
+    font-weight: 500;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+#loginForm {
+    display: none;
+}
+
+#registerForm {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .gender-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* Chính sách ưu đãi */
 .chinh_sach {
     display: flex;
     margin-bottom: 50px;
     justify-content: space-around;
     padding: 0 50px;
+    flex-wrap: wrap; /* Thêm flex-wrap để các item xuống dòng khi không đủ chỗ */
 }
 
 .cs_item {
     background-color: rgb(255, 255, 255);
     padding: 5px 20px;
-    width: 200px;
+    width: 180px;
     border-radius: 10px;
     color: black;
-    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 6px 3px rgba(59, 59, 59, 0.135);
     margin: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
+
+
 
 .cs_item i {
     font-size: 40px;
@@ -151,6 +344,7 @@
     margin-top: 100px;
     margin-bottom: 50px;
     font-family: var(--title);
+    text-align: center; /* Thêm text-align: center; để căn giữa tiêu đề */
 }
 
 .ds_sp {
@@ -164,10 +358,15 @@
     display: flex;
     width: 30%;
     align-items: center;
-    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 6px 2px rgba(122, 122, 122, 0);
     padding: 15px;
     background-color: rgb(248, 248, 248);
     position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sp:hover{
+    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 .sp i.ti-heart {
@@ -203,34 +402,35 @@
 
 /* ipad */
 @media(max-width: 824px) {
+    .back_drop {
+        margin-bottom: 30px;
+        margin-top: 18px;
+    }
+
+    .Advertising {
+        padding: 0;
+    }
+
+    .pr_demo {
+        margin: 0;
+        padding: 0 30px;
+        flex-direction: column; /* Thay đổi hướng để các item xếp dọc */
+    }
+
     .pr_demo_item {
         width: 100%;
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các item */
     }
 
     .pr_demo_item img {
         width: 80%;
     }
 
-    .text_banner {
-        font-size: 20px;
-    }
-
-    .pr_demo {
-        align-items: center;
-    }
-
-    .list_cl {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .collections {
-        width: 80%;
-        margin-bottom: 20px;
+    .pr_demo_item p {
+        font-size: 16px; /* Tăng kích thước chữ cho dễ đọc */
     }
 
     .text_banner {
-
         top: 15%;
         right: 10%;
     }
@@ -240,74 +440,76 @@
         font-size: 15px;
     }
 
-    .list_cl {
-        display: none;
-    }
-
-    .cl_show {
-        display: block;
-    }
-
-    .collections {
-        width: 100%;
-    }
-
-    .Advertising {
-        padding: 0;
-    }
-
-    .chinh_sach {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .cs_item {
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    .ds_sp {
-        flex-direction: column;
-        display: none;
-    }
-
-    .sp_show {
-        display: block;
-    }
-
-    .sp {
-
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .back_drop {
+    .bst {
+        margin-top: 30px;
         margin-bottom: 30px;
     }
 
-    .pr_demo {
-        margin: 0;
-        padding: 0 30px;
+    .list_cl {
+        display: none; /* Ẩn tất cả các list_cl */
+    }
+
+    .cl_show {
+        display: flex; /* Hiển thị list_cl có class cl_show */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collections {
+        width: 80%;
+        margin-bottom: 20px;
     }
 
     h3 {
         margin: 10px 0;
     }
+   
+    .chinh_sach {
+        padding: 0;
+        flex-direction: row; /* Đặt lại hướng flex thành hàng */
+        flex-wrap: wrap; /* Cho phép các item xuống dòng */
+        justify-content: space-evenly; /* Phân bố đều các item */
+    }
 
-    .pr_demo_item p {
-        font-size: 10px;
-
-    }
-    .back_drop{
-        margin-bottom:0px;
-        margin-top: 18px;
-    }
-    .chinh_sach{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        flex-direction: row
-    }
     .cs_item {
         width: 45%;
+        margin: 10px auto;
+    }
+
+    .ds_sp {
+        display: none; /* Ẩn tất cả các ds_sp */
+    }
+
+    .sp_show {
+        display: flex; /* Hiển thị ds_sp có class sp_show */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sp {
+        width: 80%;
+        margin-bottom: 20px;
+        flex-direction: column; /* Thay đổi hướng để ảnh và text xếp dọc */
+        text-align: center; /* Căn giữa nội dung bên trong sp */
+    }
+
+    .sp .text {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .sp_ptr {
+        margin-left: 0; /* Loại bỏ margin trái khi xếp dọc */
+        width: 100%; /* Cho ảnh chiếm toàn bộ chiều rộng */
+        max-width: 150px; /* Giới hạn chiều rộng tối đa của ảnh */
+        height: auto;
+    }
+
+    .sp i.ti-heart {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%); /* Căn giữa biểu tượng tim */
     }
 }

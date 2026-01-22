@@ -5,7 +5,7 @@
 h2{
     color: var(--mau-Nen);
     text-align: center;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .filters{
     width: 25%;
@@ -15,9 +15,19 @@ h2{
     color: rgb(5, 32, 109);
     padding: 0px;
 }
+.item {
+    cursor: pointer;
+}
+.item:hover{
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.235);
+}
 .filters ul li a{
     color: var(--mau-Nen);
     text-decoration: none;
+
+}
+.filters ul li a:hover{  
+    color: rgb(161, 161, 161);
 }
 .btn_loc{
     display: none;
@@ -34,7 +44,7 @@ h2{
     color: black;
 }
 .ds_trang_thai ul li a{
-    color: rgb(93, 93, 93);
+    color: rgb(37, 37, 37);
     text-decoration: none;
 }
 .ds_trang_thai ul{
@@ -49,7 +59,7 @@ h2{
     height: 275px;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.086);
 }
 
 .item img{
@@ -120,6 +130,12 @@ del{
     width: 80px;
     text-align: center;
     
+}
+.ds_trang_thai ul li a:hover{
+    color: rgb(106, 106, 106);
+}
+.active{
+    border-bottom: 3px solid #6161617d !important;
 }
 .pagination {
     display: flex;

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../icon/themify-icons-font/themify-icons/themify-icons.css" />
+    <link rel="icon" href="../IMG/logo_http-removebg-preview.png" type="image/x-icon">
+    <title>Danh mục san pham </title>
+    <link rel="stylesheet" href="../CSS/danhmuc.css">
+</head>
+
+<body>
+    <div class="Container">
+        <div class="container-fluid p-0">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
+                    <!-- Logo -->
+                    <a class="navbar-brand logo" href="#">
+                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
+                    </a>
+
+                    <!-- Nút toggle cho mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="ti-menu"></i></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class=" navbar-collapse menu" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DANH MỤC
+                                </a>
+                                <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="DongHoNam.html">ĐỒNG HỒ NAM</a></li>
+                                    <li><a class="dropdown-item" href="DongHoNu.html">ĐỒNG HỒ NỮ</a></li>
+                                    <li><a class="dropdown-item" href="DongHoTheThao.html">ĐỒNG HỒ THỂ THAO</a></li>
+                                    <li><a class="dropdown-item" href="TatCaSanPham.html">TẤT CẢ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/TaiKhoan.html">TÀI KHOẢN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/ThongBao.html">THÔNG BÁO</a>
+                            </li>
+                        </ul>
+
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search">
+                            <button class="search-button">
+                                <i class="ti-search"></i>
+                            </button>
+                            <input class="input_search" type="text" placeholder="Tìm kiếm">
+
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+
+        <h2>Danh sách sản phẩm</h2>
+        <div class="content">
+
+            <div class="filters">
+                <div class="filter-group">
+                    <ul class="dropdown-menu menu_Cap2">
+                        <li><a class="dropdown-item" href="donghonam.html">ĐỒNG HỒ NAM</a></li>
+                        <li><a class="dropdown-item" href="donghonu.html">ĐỒNG HỒ NỮ</a></li>
+                        <li><a class="dropdown-item" href="donghothethao.html">ĐỒNG HỒ THỂ THAO</a></li>
+                        <li><a class="dropdown-item" href="tatcasanpham.html">TẤT CẢ</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h6>Giá</h6>
+                    <ul aria-labelledby="navbarDropdown">
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham1.html">Dưới 120 triệu</a>
+                        </li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham2.html">120 - 300 triệu</a>
+                        </li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham3.html">300 - 500 triệu</a>
+                        </li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham4.html">Trên 500 triệu</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h6>Size</h6>
+                    <ul>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham4.html">Dưới 36mm</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham3.html">36mm - dưới 38mm</a>
+                        </li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham3.html">38mm - dưới 40mm</a>
+                        </li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham1.html">40mm - dưới 42mm</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h6>Chất liệu</h6>
+                    <ul>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham1.html">Vàng hồng 18k</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham2.html">Thép</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham3.html">Titanium</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham4.html">Ceramic</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h6>Tình trạng</h6>
+                    <ul>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham3.html">Mới</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham1.html">Like New</a></li>
+                        <li><i class="ti-angle-right"></i><a href="../HTML/danhsachsanpham2.html">Đã qua sử dụng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product">
+                <div class="ds_trang_thai">
+                    <ul>
+                        <li><a href="../HTML/dongHoNam.html">Nam</a></li>
+                        <li> <a href="../HTML/dongHoNu.html">Nữ</a></li>
+                        <li> <a href="../HTML/dongHoTheThao.html">Thể Thao</a></li>
+                        <li> <a href="../HTML/tatCaSanPham.html">Tất Cả</a></li>
+                    </ul>
+                </div>
+                <div class="list_item">
+
+                    <div class="item" id="product-1" style="cursor: pointer;"
+                        onclick="window.location.href='ChiTietSanPham.html?id=1'">
+                        <img src="../IMG/sanpham/dm10.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>1.120.000.000 VNĐ</del></p>
+                                <p><b>1.117.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" id="product-3" style="cursor: pointer;"
+                        onclick="window.location.href='ChiTietSanPham.html?id=3'">
+                        <img src="../IMG/sanpham/dm3.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>2.350.000.000 VNĐ</del></p>
+                                <p><b>2.305.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../IMG/sanpham/dm4.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>515.000.000 VNĐ</del></p>
+                                <p><b>503.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../IMG/sanpham/dm5.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>680.000.000 VNĐ</del></p>
+                                <p><b>670.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="../IMG/sanpham/dm9.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>1.120.000.000 VNĐ</del></p>
+                                <p><b>1.117.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../IMG/sanpham/dm13.png" alt="Đồng Hồ Audemars Piguet Code 11.59 Selfwinding">
+                        <h6>Đồng Hồ Audemars Piguet Code 11.59 Selfwinding</h6>
+                        <div class="info">
+                            <div class="text">
+                                <p> <del>1.120.000.000 VNĐ</del></p>
+                                <p><b>1.117.000.000 VNĐ</b></p>
+                            </div>
+                            <div class="btn_add">
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div-container footer">
+        <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
+        <div class="div-column">
+            <ul>
+                <li class="text_title"><a href="../HTML/about.html">Đồng hồ Rolex</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Tìm đồng hồ Rolex của bạn</a></li>
+                <li><a href="../HTML/DongHoNam.html">Đồng hồ nam</a></li>
+                <li><a href="../HTML/DongHoNu.html">Đồng hồ nữ</a></li>
+            </ul>
+            <ul>
+                <li class="text_title"><a href="../HTML/tatCaSanPham.html">Đồng hồ Rolex</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Cosmograph Daytona</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Datejust</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Explorer</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Submariner</a></li>
+            </ul>
+        </div>
+        <div class="div-column">
+            <ul>
+                <li class="text_title"><a href="../HTML/DongHoTheThao.html">Rolex và Thể thao</a></li>
+                <li><a href="../HTML/DongHoTheThao.html">Bộ môn golf</a></li>
+                <li><a href="../HTML/DongHoTheThao.html">Bộ môn đua thuyền</a></li>
+            </ul>
+            <ul>
+                <li class="text_title"><a href="../HTML/about.html">Về Rolex</a></li>
+                <li><a href="../HTML/tinh_ben.html">Tính bền vững</a></li>
+                <li><a href="../HTML/lili">Lịch sử</a></li>
+            </ul>
+            <ul>
+                <li class="text_title"><a href="../HTML/tatCaSanPham.html">Mua một chiếc Rolex</a></li>
+                <li><a href="../HTML/tatCaSanPham.html">Định vị cửa hàng</a></li>
+            </ul>
+        </div>
+        <div class="div-column">
+            <ul>
+                <li class="text_title"><a href="../HTML/thongBao.html">Dịch vụ</a></li>
+                <li><a href="../HTML/thongBao.html">Những câu hỏi thường gặp</a></li>
+                <li><a href="../HTML/thongBao.html">Tin tức</a></li>
+            </ul>
+            <ul>
+                <li class="text_title"><a href="#">Kênh chính thức</a></li>
+                <li><a href="https://www.youtube.com/@ROLEX"><i class="ti-youtube"></i>YouTube</a></li>
+                <li><a href="https://www.instagram.com/rolex/"><i class="ti-instagram"></i>Instagram</a></li>
+                <li><a href="https://www.facebook.com/rolex"><i class="ti-facebook"></i>Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarNav');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('show'); // Khi click vào nút thì toggle class 'show' cho menu
+        });
+
+    </script>
+</body>
+
+</html>
